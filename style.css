@@ -683,93 +683,156 @@ form input[type="button"],
 color: #ffffff !important;
 }
 
-/* одинаковое расстояние между строками в блоках слева */
-.left-menu .left-menu-text,
-.left-menu .left-menu-text * {
-line-height: 1.15 !important;
-}
+/* ---------------- ЛЕВОЕ МЕНЮ: РОВНЫЙ ШРИФТ И ИНТЕРВАЛЫ ---------------- */
 
-.left-menu .left-menu-text a,
-.left-menu .left-menu-text div,
-.left-menu .left-menu-text span,
-.left-menu .left-menu-text p {
+/* все обычные текстовые строки в видимых блоках */
+.left-menu p.left-menu-text,
+.left-menu div.left-menu-text,
+.left-menu .right-menu-text {
+font-size: 11px !important;
+line-height: 1.25 !important;
 margin: 0 !important;
-padding-top: 0 !important;
-padding-bottom: 0 !important;
+padding: 4px 12px !important;
 }
 
-/* убрать лишние переносы в блоках слева */
-.left-menu .left-menu-text br {
-display: none !important;
+/* заголовки оставляем крупнее */
+.left-menu > div > h3,
+h3.left-menu-text {
+font-size: 13px !important;
+line-height: 1.25 !important;
+margin: 0 !important;
+padding: 8px 12px !important;
 }
 
-/* категории в одну строку */
-.left-menu .blog__tags .left-menu-text,
-.left-menu .blog__tags .left-menu-text * {
-line-height: 1.15 !important;
-}
-
-.left-menu .blog__tags .left-menu-text a,
-.left-menu .blog__tags .left-menu-text div,
-.left-menu .blog__tags .left-menu-text span {
-display: inline !important;
+/* внутренние элементы строк */
+.left-menu .left-menu-text a,
+.left-menu .left-menu-text span,
+.left-menu .left-menu-text div,
+.left-menu .left-menu-text p,
+.left-menu .right-menu-text a,
+.left-menu .right-menu-text span,
+.left-menu .right-menu-text div,
+.left-menu .right-menu-text p {
+font-size: 11px !important;
+line-height: 1.25 !important;
 margin: 0 !important;
 padding: 0 !important;
+white-space: normal !important;
 }
 
-.left-menu .blog__tags .left-menu-text br {
-display: none !important;
-}
-
-/* ===== АККУРАТНОЕ РАССТОЯНИЕ В СКРЫТОМ ЛЕВОМ МЕНЮ ===== */
-
-/* новые комментарии, сообщения, уведомления и похожие блоки */
+/* новые комментарии, сообщения, уведомления */
 .notifications__comments p.left-menu-text,
 .left-menu__user-notification p.left-menu-text,
 .left-menu__unread-message p.left-menu-text,
 .left-menu__unread-notifications p.left-menu-text {
-    padding-top: 4px !important;
-    padding-right: 12px !important;
-    padding-bottom: 4px !important;
-    padding-left: 12px !important;
-    margin: 0 !important;
-    line-height: 1.2 !important;
+font-size: 11px !important;
+line-height: 1.25 !important;
+margin: 0 !important;
+padding: 4px 12px !important;
 }
 
-/* ссылки внутри этих строк */
+/* блок о себе и похожие */
+.blog__about > .left-menu-text,
+.left-menu__friends > .left-menu-text,
+.left-menu__friends_offline > .left-menu-text,
+.blog__last-comments > .left-menu-text,
+.blog__read-me > .left-menu-text,
+.blog__iread > .left-menu-text {
+font-size: 11px !important;
+line-height: 1.25 !important;
+margin: 0 !important;
+padding: 4px 12px !important;
+}
+
+/* ссылки в обычных блоках без запрета переноса */
 .notifications__comments p.left-menu-text a,
 .left-menu__user-notification p.left-menu-text a,
 .left-menu__unread-message p.left-menu-text a,
-.left-menu__unread-notifications p.left-menu-text a {
-    display: inline-block !important;
-    line-height: 1.2 !important;
-    white-space: nowrap !important;
-}
-
-/* блок "о себе" и похожие обычные строки меню */
-.blog__about > .left-menu-text,
-.left-menu__friends > .left-menu-text,
-.blog__last-comments > .left-menu-text,
-.blog__read-me > .left-menu-text {
-    padding-top: 4px !important;
-    padding-right: 12px !important;
-    padding-bottom: 4px !important;
-    padding-left: 12px !important;
-    margin: 0 !important;
-    line-height: 1.2 !important;
-}
-
-/* ссылки в обычных строках меню не переносим */
+.left-menu__unread-notifications p.left-menu-text a,
 .blog__about > .left-menu-text a,
 .left-menu__friends > .left-menu-text a,
+.left-menu__friends_offline > .left-menu-text a,
 .blog__last-comments > .left-menu-text a,
-.blog__read-me > .left-menu-text a {
-    line-height: 1.2 !important;
-    white-space: nowrap !important;
+.blog__read-me > .left-menu-text a,
+.blog__iread > .left-menu-text a,
+.left-menu .right-menu-text a {
+font-size: 11px !important;
+line-height: 1.25 !important;
+margin: 0 !important;
+padding: 0 !important;
+white-space: normal !important;
+display: inline !important;
 }
 
-/* мои категории не трогаем */
+/* убрать лишние br */
+.left-menu .left-menu-text br,
+.left-menu .right-menu-text br {
+display: none !important;
+}
+
+/* мои категории оставляем как есть */
 .blog__tags .left-menu-text,
-.blog__tags .left-menu-text * {
-    white-space: normal !important;
+.blog__tags .left-menu-text *,
+.left-menu .blog__tags .left-menu-text,
+.left-menu .blog__tags .left-menu-text * {
+white-space: normal !important;
+font-size: inherit !important;
+line-height: inherit !important;
+margin: 0 !important;
+padding: 0 !important;
+}
+/* убрать пустые строки и пустые блоки в левом меню */
+.left-menu .left-menu-text:empty,
+.left-menu .right-menu-text:empty,
+.left-menu .blog__about > div:empty,
+.left-menu .blog__about > p:empty,
+.left-menu .notifications__comments > div:empty,
+.left-menu .notifications__comments > p:empty,
+.left-menu__user-notification > div:empty,
+.left-menu__user-notification > p:empty,
+.left-menu__unread-message > div:empty,
+.left-menu__unread-message > p:empty,
+.left-menu__unread-notifications > div:empty,
+.left-menu__unread-notifications > p:empty {
+    display: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+}
+
+/* обычные строки левого меню */
+.left-menu p.left-menu-text,
+.left-menu div.left-menu-text,
+.left-menu .right-menu-text {
+    font-size: 11px !important;
+    line-height: 1.25 !important;
+    margin: 0 !important;
+    padding: 2px 12px !important;
+}
+
+/* всё внутри строк */
+.left-menu .left-menu-text a,
+.left-menu .left-menu-text span,
+.left-menu .left-menu-text div,
+.left-menu .left-menu-text p,
+.left-menu .right-menu-text a,
+.left-menu .right-menu-text span,
+.left-menu .right-menu-text div,
+.left-menu .right-menu-text p {
+    font-size: 11px !important;
+    line-height: 1.25 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* заголовки блоков */
+.left-menu > div > h3,
+h3.left-menu-text {
+    font-size: 13px !important;
+    line-height: 1.25 !important;
+    margin: 0 !important;
+    padding: 8px 12px !important;
 }
