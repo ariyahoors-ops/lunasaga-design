@@ -781,6 +781,7 @@ line-height: inherit !important;
 margin: 0 !important;
 padding: 0 !important;
 }
+
 /* убрать пустые строки и пустые блоки в левом меню */
 .left-menu .left-menu-text:empty,
 .left-menu .right-menu-text:empty,
