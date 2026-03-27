@@ -1,0 +1,775 @@
+/* ---------------- ОБЩИЙ ФОН ---------------- */
+
+body.bodybg {
+background: #f7f4f2 url("https://i1.beon.fun/76/92/9276/31/1709531/3.png") repeat fixed;
+background-size: 370px auto;
+color: #7c665f;
+font-family: Tahoma, Arial, sans-serif;
+font-size: 13px;
+line-height: 1.5;
+margin: 0;
+}
+
+div#app {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 12px;
+box-sizing: border-box;
+background: transparent;
+position: relative;
+}
+
+/* ---------------- ВЕРХНЕЕ МЕНЮ ---------------- */
+
+nav.navbar,
+.bg-white {
+background: rgba(250, 248, 247, 0.96) !important;
+border: 1px solid #d8c8c3 !important;
+border-radius: 14px !important;
+box-shadow: 0 4px 14px rgba(124, 102, 95, 0.08) !important;
+margin-top: 10px !important;
+padding: 10px 16px !important;
+}
+
+a.navbar-brand {
+color: #c77a7d !important;
+font-size: 14px !important;
+font-weight: bold !important;
+text-decoration: none !important;
+}
+
+.m2 {
+color: #7c665f !important;
+font-size: 11px !important;
+}
+
+.pc-menu,
+.pc-menu * {
+color: #7c665f !important;
+font-size: 11px !important;
+line-height: 1.25 !important;
+}
+
+.pc-menu a {
+color: #7c665f !important;
+text-decoration: none !important;
+}
+
+.pc-menu a:hover {
+color: #b76569 !important;
+}
+
+/* прячем текстовую ссылку вниз в верхнем меню */
+a.my-menu.for-mobile.d-none.d-md-inline,
+a.my-menu.for-mobile.mobile-scroll-down.d-inline.d-md-none {
+font-size: 0 !important;
+color: transparent !important;
+text-decoration: none !important;
+padding: 0 !important;
+}
+
+/* ---------------- ХЛЕБНЫЕ КРОШКИ / ЗАГОЛОВОК ДНЕВНИКА ---------------- */
+
+.crumbs {
+background: linear-gradient(180deg, #d88f91 0%, #c9797c 100%) !important;
+border: none !important;
+border-radius: 14px !important;
+padding: 9px 16px !important;
+margin: 14px 0 22px 0 !important;
+color: #ffffff !important;
+font-size: 13px !important;
+box-shadow: 0 4px 12px rgba(124, 102, 95, 0.12) !important;
+}
+
+.crumbs a,
+.crumbs span,
+.crumbs {
+color: #ffffff !important;
+}
+
+/* ---------------- НИЖНИЙ БЛОК ---------------- */
+
+.bottombg.p-1 {
+display: block !important;
+background: transparent !important;
+border: none !important;
+padding: 0 !important;
+margin: 0 !important;
+height: 0 !important;
+overflow: visible !important;
+}
+
+.footer__infolinks.p-1,
+div#page__admincontact.text-center,
+div#footer.p-1,
+div#page__rendertime.p-1 {
+display: none !important;
+}
+
+/* ---------------- ОСНОВА ---------------- */
+
+main.py-4 {
+display: flex !important;
+flex-direction: column !important;
+align-items: stretch !important;
+gap: 0 !important;
+background: transparent !important;
+}
+
+div.left-menu,
+div.content {
+width: 100% !important;
+max-width: 100% !important;
+min-width: 0 !important;
+margin: 0 !important;
+padding: 0 !important;
+border: none !important;
+background: transparent !important;
+box-sizing: border-box !important;
+}
+
+div.left-menu {
+order: 1 !important;
+margin-bottom: 28px !important;
+}
+
+div.content {
+order: 2 !important;
+margin-top: 18px !important;
+}
+
+/* ---------------- СВЕРНУТОЕ МЕНЮ ---------------- */
+
+.left-menu {
+position: relative !important;
+display: block !important;
+max-height: 46px !important;
+overflow: hidden !important;
+transition: max-height 0.28s ease !important;
+padding-top: 0 !important;
+}
+
+.left-menu::before {
+content: "открыть меню ⌄";
+display: block;
+background: linear-gradient(180deg, #d88f91 0%, #c9797c 100%);
+border: none;
+border-radius: 14px;
+color: #ffffff;
+font-size: 13px;
+line-height: 44px;
+height: 44px;
+padding: 0 16px;
+box-sizing: border-box;
+cursor: pointer;
+box-shadow: 0 4px 12px rgba(124, 102, 95, 0.12);
+}
+
+.left-menu:hover {
+max-height: 3000px !important;
+}
+
+.left-menu:hover::before {
+content: "скрыть меню ⌃";
+margin-bottom: 12px;
+}
+
+.left-menu > div {
+width: 100% !important;
+margin: 0 0 12px 0 !important;
+background: rgba(250, 248, 247, 0.97) !important;
+border: 1px solid #d8c8c3 !important;
+border-radius: 14px !important;
+overflow: hidden !important;
+box-shadow: 0 4px 12px rgba(124, 102, 95, 0.06) !important;
+box-sizing: border-box !important;
+}
+
+/* заголовки блоков меню */
+h3.left-menu-text,
+.left-menu > div > h3 {
+background: linear-gradient(180deg, #d88f91 0%, #c9797c 100%) !important;
+color: #ffffff !important;
+border: none !important;
+border-radius: 0 !important;
+padding: 8px 12px !important;
+margin: 0 !important;
+font-size: 13px !important;
+font-weight: normal !important;
+box-shadow: none !important;
+}
+
+.left-menu,
+.left-menu * {
+color: #7c665f !important;
+font-size: 13px !important;
+box-sizing: border-box !important;
+}
+
+.left-menu .left-menu-text {
+padding: 10px 12px !important;
+}
+
+.left-menu a {
+color: #b76569 !important;
+text-decoration: none !important;
+}
+
+.left-menu a:hover {
+color: #9d5559 !important;
+}
+
+.mobile_open_menu {
+display: none !important;
+}
+
+/* ---------------- ПОСТЫ, ДАТЫ, КОММЕНТАРИИ ---------------- */
+
+.post-content,
+.comment-content,
+.textareabg,
+.datebg,
+div.datebg {
+width: 100% !important;
+max-width: 100% !important;
+box-sizing: border-box !important;
+margin: 0 0 16px 0 !important;
+color: #7c665f !important;
+}
+
+.post-content {
+background: rgba(250, 248, 247, 0.97) !important;
+border: 1px solid #d8c8c3 !important;
+border-radius: 16px !important;
+padding: 16px !important;
+line-height: 1.6 !important;
+font-size: 13px !important;
+box-shadow: 0 6px 18px rgba(124, 102, 95, 0.08) !important;
+overflow: visible !important;
+}
+
+.datebg,
+div.datebg {
+background: linear-gradient(180deg, #d88f91 0%, #c9797c 100%) !important;
+border: none !important;
+border-radius: 14px !important;
+padding: 8px 14px !important;
+color: #ffffff !important;
+font-size: 13px !important;
+font-weight: bold !important;
+line-height: 1.4 !important;
+box-shadow: 0 4px 12px rgba(124, 102, 95, 0.10) !important;
+overflow: visible !important;
+}
+
+.comment-content {
+background: rgba(250, 248, 247, 0.97) !important;
+border: 1px solid #d8c8c3 !important;
+border-radius: 12px !important;
+padding: 10px !important;
+font-size: 13px !important;
+box-shadow: 0 4px 12px rgba(124, 102, 95, 0.05) !important;
+}
+
+.comment-box {
+background: transparent !important;
+}
+
+.textareabg {
+background: rgba(250, 248, 247, 0.97) !important;
+border: 1px solid #d8c8c3 !important;
+border-radius: 12px !important;
+padding: 10px !important;
+box-shadow: 0 4px 12px rgba(124, 102, 95, 0.05) !important;
+}
+
+/* заголовки и ссылки в постах */
+.post-title a,
+.post-content a,
+.comment-content a {
+color: #b76569 !important;
+}
+
+.post-title a:hover,
+.post-content a:hover,
+.comment-content a:hover {
+color: #9d5559 !important;
+}
+
+/* ---------------- АВАТАРЫ ---------------- */
+
+.post-avatar,
+.comment-avatar,
+.sign {
+width: 100px !important;
+max-width: 100px !important;
+}
+
+.post-avatar img,
+.comment-avatar img,
+.sign img,
+.avatar-select-label img,
+img.avatars-fullscreen-link,
+.post-content img[alt="avatar"],
+.comment-content img[alt="avatar"] {
+width: 100px !important;
+min-width: 100px !important;
+max-width: 100px !important;
+height: auto !important;
+max-height: 160px !important;
+object-fit: cover !important;
+display: block !important;
+border-radius: 10px !important;
+}
+
+.post-text img.imagefsme,
+.post-text .imagewrapper img,
+.post-content img:not([alt="avatar"]),
+.comment-content img:not([alt="avatar"]) {
+max-width: 100% !important;
+width: auto !important;
+height: auto !important;
+}
+
+/* ---------------- РЕДАКТОР И ФОРМА ---------------- */
+
+.modal,
+.popup,
+.photo-window,
+#imageupload,
+#uploadform,
+#uploadimagemodal,
+#imagefsmodal,
+#addblogmodal {
+z-index: 9999 !important;
+}
+
+/* поля */
+input,
+textarea,
+select {
+font-size: 13px !important;
+color: #7c665f !important;
+background: #faf8f7 !important;
+border: 1px solid #d8c8c3 !important;
+border-radius: 8px !important;
+padding: 5px 8px !important;
+box-shadow: none !important;
+}
+
+/* все кнопки одинакового цвета */
+button,
+input[type="submit"],
+input[type="button"],
+a.button,
+.btn,
+.btn-primary,
+.btn-secondary {
+background: linear-gradient(180deg, #d88f91 0%, #c9797c 100%) !important;
+color: #ffffff !important;
+border-radius: 10px !important;
+border: none !important;
+padding: 6px 12px !important;
+font-size: 12px !important;
+box-shadow: 0 4px 10px rgba(124, 102, 95, 0.12) !important;
+-webkit-appearance: none !important;
+appearance: none !important;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+a.button:hover,
+.btn:hover,
+.btn-primary:hover,
+.btn-secondary:hover {
+background: linear-gradient(180deg, #e3a2a4 0%, #d88f91 100%) !important;
+color: #ffffff !important;
+}
+
+/* кнопки в редакторе снизу */
+form button,
+form input[type="submit"],
+form input[type="button"],
+.textareabg button,
+.textareabg input[type="submit"],
+.textareabg input[type="button"] {
+background: linear-gradient(180deg, #d88f91 0%, #c9797c 100%) !important;
+color: #ffffff !important;
+border: none !important;
+border-radius: 10px !important;
+box-shadow: 0 4px 10px rgba(124, 102, 95, 0.12) !important;
+-webkit-appearance: none !important;
+appearance: none !important;
+}
+
+/* ---------------- СКРЫТЬ НУЖНОЕ ---------------- */
+
+.left-menu__friends,
+.left-menu__friends_offline,
+div.left-menu__friends,
+div.left-menu__friends_offline {
+display: none !important;
+}
+
+.blog__read-me,
+div.blog__read-me {
+display: none !important;
+}
+
+.blog__iread,
+div.blog__iread {
+display: none !important;
+}
+
+.blog__last-comments,
+div.blog__last-comments {
+display: none !important;
+}
+
+.left-menu input[type="text"],
+.left-menu input[type="search"],
+.left-menu button[type="submit"],
+.left-menu input[type="submit"] {
+display: none !important;
+}
+
+.left-menu a[href*="subscribers"],
+.left-menu div[class*="subscriber"],
+.left-menu div[class*="reader"] {
+display: none !important;
+}
+
+.post-content.blog_total_counter,
+div.post-content.blog_total_counter,
+.post-content[class*="blog_total"] {
+display: none !important;
+}
+
+.blog__refferers,
+div.blog__refferers,
+.left-menu > div.blog__refferers,
+.left-menu div.blog__refferers,
+div[class="blog__refferers"] {
+display: none !important;
+visibility: hidden !important;
+opacity: 0 !important;
+height: 0 !important;
+min-height: 0 !important;
+max-height: 0 !important;
+overflow: hidden !important;
+margin: 0 !important;
+padding: 0 !important;
+border: none !important;
+}
+
+.blog__refferers *,
+div.blog__refferers * {
+display: none !important;
+}
+
+/* ---------------- ОБЩИЕ ССЫЛКИ ---------------- */
+
+a {
+color: #b76569 !important;
+text-decoration: none !important;
+}
+
+a:hover {
+color: #9d5559 !important;
+text-decoration: none !important;
+}
+
+/* ---------------- КНОПКИ ВВЕРХ / ВНИЗ ---------------- */
+
+span[onclick="window.scroll({top: 0,behavior: 'smooth'})"],
+a.my-menu.for-mobile.d-none.d-md-inline,
+a.my-menu.for-mobile.mobile-scroll-down.d-inline.d-md-none {
+position: fixed !important;
+left: auto !important;
+right: max(10px, calc((100vw - 1200px) / 2 - 56px)) !important;
+width: 42px !important;
+height: 42px !important;
+display: flex !important;
+align-items: center !important;
+justify-content: center !important;
+background: linear-gradient(180deg, #d88f91 0%, #c9797c 100%) !important;
+border: none !important;
+border-radius: 14px !important;
+box-shadow: 0 4px 12px rgba(124, 102, 95, 0.14) !important;
+z-index: 9999 !important;
+padding: 0 !important;
+font-size: 0 !important;
+color: transparent !important;
+text-decoration: none !important;
+text-shadow: none !important;
+float: none !important;
+overflow: hidden !important;
+cursor: pointer !important;
+}
+
+span[onclick="window.scroll({top: 0,behavior: 'smooth'})"] {
+top: 18px !important;
+}
+
+a.my-menu.for-mobile.d-none.d-md-inline,
+a.my-menu.for-mobile.mobile-scroll-down.d-inline.d-md-none {
+top: 68px !important;
+}
+
+span[onclick="window.scroll({top: 0,behavior: 'smooth'})"]::before {
+content: "˄" !important;
+font-size: 22px !important;
+line-height: 1 !important;
+color: #ffffff !important;
+}
+
+a.my-menu.for-mobile.d-none.d-md-inline::before,
+a.my-menu.for-mobile.mobile-scroll-down.d-inline.d-md-none::before {
+content: "˅" !important;
+font-size: 22px !important;
+line-height: 1 !important;
+color: #ffffff !important;
+}
+
+span[onclick="window.scroll({top: 0,behavior: 'smooth'})"]:hover,
+a.my-menu.for-mobile.d-none.d-md-inline:hover,
+a.my-menu.for-mobile.mobile-scroll-down.d-inline.d-md-none:hover {
+background: linear-gradient(180deg, #e3a2a4 0%, #d88f91 100%) !important;
+}
+
+/* ---------------- СКРОЛЛ ---------------- */
+
+::-webkit-scrollbar {
+width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+background: #cdb9b3;
+border-radius: 8px;
+}
+
+/* ---------------- ТОЧЕЧНЫЕ ПРАВКИ ---------------- */
+
+/* все ссылки кроме надписи BeOn.Fun */
+a:not(.navbar-brand) {
+color: #b76569 !important;
+}
+
+a:not(.navbar-brand):hover {
+color: #9d5559 !important;
+}
+
+/* служебные ссылки-переходы под постом */
+.post-content a[href*="delete"],
+.post-content a[href*="edit"],
+.post-content a[href*="repost"],
+.post-content a[href*="reply"],
+.post-content a[href*="favorites"],
+.post-content a[href*="comments"],
+.post-content .post-opt a,
+.post-content .post-bottom a,
+.row.w-100.mt-3.post-opt .col-md-6 > a {
+color: #b76569 !important;
+}
+
+.post-content a[href*="delete"]:hover,
+.post-content a[href*="edit"]:hover,
+.post-content a[href*="repost"]:hover,
+.post-content a[href*="reply"]:hover,
+.post-content a[href*="favorites"]:hover,
+.post-content a[href*="comments"]:hover,
+.post-content .post-opt a:hover,
+.post-content .post-bottom a:hover,
+.row.w-100.mt-3.post-opt .col-md-6 > a:hover {
+color: #9d5559 !important;
+}
+
+/* span-кнопки удаления / сброса */
+span[data-toggle="modal"][data-deletelink],
+.row.w-100.mt-3.post-opt .col-md-6 > span[data-toggle="modal"][data-deletelink],
+.post-content .container-fluid span[data-toggle="modal"][data-deletelink] {
+color: #b76569 !important;
+cursor: pointer !important;
+}
+
+span[data-toggle="modal"][data-deletelink]:hover,
+.row.w-100.mt-3.post-opt .col-md-6 > span[data-toggle="modal"][data-deletelink]:hover,
+.post-content .container-fluid span[data-toggle="modal"][data-deletelink]:hover {
+color: #9d5559 !important;
+}
+
+/* кнопки-ссылки, включая модалку загрузки */
+a.btn,
+a.btn-outline-primary,
+a.btn.btn-outline-primary,
+a.btn.btn-outline-primary.mb-3,
+a.btn.btn-outline-primary.mb-2,
+a.btn.btn-outline-primary.mb-2.w-100,
+.modal-body a.btn,
+.modal-body a.btn-outline-primary,
+.modal-body a.btn.btn-outline-primary,
+.modal-body a.btn.btn-outline-primary.mb-2,
+.modal-body a.btn.btn-outline-primary.mb-2.w-100,
+.content a.btn,
+.content a.btn-outline-primary,
+.content a.btn.btn-outline-primary,
+.content a.btn.btn-outline-primary.mb-3 {
+background: linear-gradient(180deg, #d88f91 0%, #c9797c 100%) !important;
+color: #ffffff !important;
+border: none !important;
+box-shadow: 0 4px 10px rgba(124, 102, 95, 0.12) !important;
+}
+
+a.btn *,
+a.btn-outline-primary *,
+a.btn.btn-outline-primary *,
+.modal-body a.btn *,
+.modal-body a.btn-outline-primary *,
+.modal-body a.btn.btn-outline-primary *,
+.content a.btn *,
+.content a.btn-outline-primary *,
+.content a.btn.btn-outline-primary * {
+color: #ffffff !important;
+}
+
+a.btn:hover,
+a.btn-outline-primary:hover,
+a.btn.btn-outline-primary:hover,
+.modal-body a.btn:hover,
+.modal-body a.btn-outline-primary:hover,
+.modal-body a.btn.btn-outline-primary:hover,
+.content a.btn:hover,
+.content a.btn-outline-primary:hover,
+.content a.btn.btn-outline-primary:hover {
+background: linear-gradient(180deg, #e3a2a4 0%, #d88f91 100%) !important;
+color: #ffffff !important;
+border: none !important;
+}
+
+/* белый текст в рыжих шапках и кнопках */
+.left-menu > div > h3,
+h3.left-menu-text,
+.crumbs,
+.crumbs a,
+.crumbs span,
+.datebg,
+div.datebg,
+.left-menu::before,
+button,
+button *,
+input[type="submit"],
+input[type="button"],
+.btn,
+.btn *,
+.btn-primary,
+.btn-primary *,
+.btn-secondary,
+.btn-secondary *,
+a.button,
+a.button *,
+a.btn,
+a.btn *,
+a.btn-outline-primary,
+a.btn-outline-primary *,
+form button,
+form button *,
+form input[type="submit"],
+form input[type="button"],
+.textareabg button,
+.textareabg button *,
+.textareabg input[type="submit"],
+.textareabg input[type="button"] {
+color: #ffffff !important;
+}
+
+/* одинаковое расстояние между строками в блоках слева */
+.left-menu .left-menu-text,
+.left-menu .left-menu-text * {
+line-height: 1.15 !important;
+}
+
+.left-menu .left-menu-text a,
+.left-menu .left-menu-text div,
+.left-menu .left-menu-text span,
+.left-menu .left-menu-text p {
+margin: 0 !important;
+padding-top: 0 !important;
+padding-bottom: 0 !important;
+}
+
+/* убрать лишние переносы в блоках слева */
+.left-menu .left-menu-text br {
+display: none !important;
+}
+
+/* категории в одну строку */
+.left-menu .blog__tags .left-menu-text,
+.left-menu .blog__tags .left-menu-text * {
+line-height: 1.15 !important;
+}
+
+.left-menu .blog__tags .left-menu-text a,
+.left-menu .blog__tags .left-menu-text div,
+.left-menu .blog__tags .left-menu-text span {
+display: inline !important;
+margin: 0 !important;
+padding: 0 !important;
+}
+
+.left-menu .blog__tags .left-menu-text br {
+display: none !important;
+}
+
+/* ===== АККУРАТНОЕ РАССТОЯНИЕ В СКРЫТОМ ЛЕВОМ МЕНЮ ===== */
+
+/* новые комментарии, сообщения, уведомления и похожие блоки */
+.notifications__comments p.left-menu-text,
+.left-menu__user-notification p.left-menu-text,
+.left-menu__unread-message p.left-menu-text,
+.left-menu__unread-notifications p.left-menu-text {
+padding-top: 4px !important;
+padding-right: 12px !important;
+padding-bottom: 4px !important;
+padding-left: 12px !important;
+margin: 0 !important;
+line-height: 1.2 !important;
+}
+
+/* ссылки внутри этих строк */
+.notifications__comments p.left-menu-text a,
+.left-menu__user-notification p.left-menu-text a,
+.left-menu__unread-message p.left-menu-text a,
+.left-menu__unread-notifications p.left-menu-text a {
+display: inline-block !important;
+line-height: 1.2 !important;
+white-space: nowrap !important;
+}
+
+/* блок "о себе" и похожие обычные строки меню */
+.blog__about > .left-menu-text,
+.left-menu__friends > .left-menu-text,
+.blog__last-comments > .left-menu-text,
+.blog__read-me > .left-menu-text {
+padding-top: 4px !important;
+padding-right: 12px !important;
+padding-bottom: 4px !important;
+padding-left: 12px !important;
+margin: 0 !important;
+line-height: 1.2 !important;
+}
+
+/* ссылки в обычных строках меню не переносим */
+.blog__about > .left-menu-text a,
+.left-menu__friends > .left-menu-text a,
+.blog__last-comments > .left-menu-text a,
+.blog__read-me > .left-menu-text a {
+line-height: 1.2 !important;
+white-space: nowrap !important;
+}
+
+/* мои категории не трогаем */
+.blog__tags .left-menu-text,
+.blog__tags .left-menu-text * {
+white-space: normal !important;
+}
